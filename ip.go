@@ -1,15 +1,14 @@
-package utils
+package main
 
 import (
 	"bytes"
-	"fmt"
 	"strconv"
 	"strings"
-	"testing"
 )
 
-func TestIpStringToInt(t *testing.T) {
-	ipData := strings.Split("127.0.0.1", ".")
+// IpStringToInt ip串转int
+func IpStringToInt(ipString string) int {
+	ipData := strings.Split(ipString, ".")
 	var ipInt int
 	var pos uint = 24
 	for _, ipSeg := range ipData {
@@ -18,11 +17,11 @@ func TestIpStringToInt(t *testing.T) {
 		ipInt = ipInt | tempInt
 		pos -= 8
 	}
-	fmt.Println(ipInt)
+	return ipInt
 }
 
-func TestIpIntToString(t *testing.T) {
-	ipInt := 2130706433
+// IpIntToString int转ip串
+func IpIntToString(ipInt int) string {
 	ipData := make([]string, 4)
 	var ipLen = len(ipData)
 	buffer := bytes.NewBufferString("")
@@ -37,5 +36,5 @@ func TestIpIntToString(t *testing.T) {
 			buffer.WriteString(".")
 		}
 	}
-	fmt.Println(buffer.String())
+	return buffer.String()
 }
