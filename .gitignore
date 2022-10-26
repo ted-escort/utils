@@ -1,0 +1,17 @@
+# goland project files
+.idea
+
+
+# tmp files
+tmp
+
+# log files
+log
+
+# upload files
+uploads
+
+#sql
+sql
+
+
