@@ -4,7 +4,7 @@ type ErrorUtil struct {
 	Message string
 }
 
-func NewErrorUtil(message string) *ErrorUtil {
+func NewError(message string) *ErrorUtil {
 	return &ErrorUtil{Message: message}
 }
 
