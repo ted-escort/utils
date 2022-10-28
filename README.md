@@ -17,6 +17,6 @@ go get github.com/ted-escort/utils
 Sample usage model:
 
 ```go
-    等待更新...
+    // 等待更新...
 ```
 
