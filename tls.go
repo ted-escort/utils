@@ -4,7 +4,7 @@ import (
 	"net/http"
 )
 
-func GetTLS(r *http.Request) string {
+func TLS(r *http.Request) string {
 	if r.TLS == nil {
 		return "http://"
 	} else {
