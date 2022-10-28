@@ -5,7 +5,7 @@ import (
 )
 
 func TLS() string {
-	var r *http.Request
+	var r http.Request
 	if r.TLS == nil {
 		return "http://"
 	} else {
