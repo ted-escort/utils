@@ -10,8 +10,8 @@ import (
 	"time"
 )
 
-// SaveFile 保存文件
-func SaveFile(path string, base64ImageContent string) bool {
+// SaveBase64 保存文件
+func SaveBase64(path string, base64ImageContent string) bool {
 	b, _ := regexp.MatchString(`^data:\s*image\/(\w+);base64,`, base64ImageContent)
 	if !b {
 		return false
